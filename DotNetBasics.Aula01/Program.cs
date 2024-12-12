@@ -16,16 +16,59 @@ do
     Console.WriteLine("Calculadora");
     Console.Write("Digite a operação de soma (ex: 10+15): ");
 
-    input = Console.ReadLine();
+    input = Console.ReadLine(); 
     
-    string[] partes = input.Split('+');
+    string[] partes = input.Split('+');// 10+15 → [10,15]
 
     double numero1 = Convert.ToDouble(partes[0]);
     double numero2 = Convert.ToDouble(partes[1]);
     double resultado = numero1 + numero2;
 
+    // string.Format("olá {0}, hoje é {1}", "luiz", "dia");
+    
     Console.WriteLine($"Resultado: {resultado}");
-    Console.WriteLine("Deseja realizar outra operação? (s/n): ");
+    
+    Console.WriteLine("Deseja realizar outra operação? (s/n): ");// s
     input = Console.ReadLine().ToLower();
 
 } while (input == "s");
+
+
+Console.WriteLine("Fim");
+
+/*
+
+Console.Write("Qual o valor do produto: ");
+string input = Console.ReadLine();
+
+decimal preco = decimal.Parse(input);
+decimal desconto = CalcularDesconto(preco);
+
+
+
+static decimal Soma(decimal val1, decimal val2)
+{
+    // ....
+    
+    return val1 + val2;
+}
+
+
+
+// retorno Nome (tipo nome)
+
+static decimal CalcularDesconto(decimal preco)
+{
+    decimal desconto = 0m;
+    if (preco > 100)
+    {
+        desconto = 20m;
+    }
+    else if (preco > 50)
+    {
+        desconto = 10m;
+    }
+
+    return desconto;
+}
+*/
